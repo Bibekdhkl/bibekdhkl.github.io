@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>
+                  Bibek's Portfolio
+            </title>
+            <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
+            <meta name="viewport" content="width=device-widht,inital-scale=1">
+            <link rel="stylesheet" href="style.css">
+
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+            <!-- Fontawesome CDN include -->
+            <script src="https://kit.fontawesome.com/f4013c76e7.js" crossorigin="anonymous"></script>
+            
+            
+            <body>
+                  <div class="webpage">
+                        <div class="navigation">
+                              <header>
+                                    <a href="#about_me"><i class="fas fa-user"></i>Bibek Dhakal</a></header>
+                              <ul>
+                                    <li><a href="#about_me">About Me</a></li>
+                                    <li><a href="#my_skills">My Skills</a></li>
+                                    <li><a href="#contact_me">Contact</a></li>
+                                    <li><a href="#my_projects">Projects</a></li>
+
+                              </ul>
+                        </div>
+                        <div class="social_media">
+                              <div class="vertical_line"></div>
+                              <div class="github icon"><a href="https://github.com/Bibekdhkl" class="fab fa-github" target="_blank"></a> </div>
+                              <div class="twitter icon"><a href="https://twitter.com/bibekdhkl" class="fab fa-twitter" target="_blank"></a> </div>
+                              <div class="hackerrank icon"><a href="https://www.hackerrank.com/Bibekdhkl" class="fab fa-hackerrank" target="_blank"></a> </div>
+                              <div class="likedIn icon"><a href="https://www.linkedin.com/in/bibekdhkl/" class="fab fa-linkedin" target="_blank"></a> </div>
+                        </div>
+                        <main>
+                              <section id="about_me"> 
+                                    <img src="../assets/bibekdhkl.png" class="profile_img">
+                                    <div class="about_me_description">
+                                          <h1>Hi there!</h1>
+                                          <p>An avid Reader ,Learner ,Questionaire and a Programmer. I believe in 0.1% improvement each day rather than 10% in a week. I follow the quote "<b>SHARING IS CARING</b>".</p>
+                                     </div>
+                              </section>
+                         <hr><hr>
+                              <!-- My skills section -->
+                              <section id="my_skills">
+                                    <h2>My Skills</h2>
+                                    <div class="skills-div">
+                                          <div class="skills-description">
+                                                I am familiar with Procedural Oriented, Object Oriented, Markup, Markdown languages along with JS on Client side and PHP on server-side with MY-SQL as Database.
+                                          </div>
+                                          <div class="skill-bar">
+                                                 <ul class="tech_stack">
+                                                      <li>C-Programs<br><img src="../assets/cprogram.png" alt="cprogram"></li>
+                                                      <li>C++ Programs<br><img src="../assets/cplusplus.png" alt="c++"></li>
+                                                      <li>HTML<br><img src="../assets/html.png" alt="html"></li>
+                                                      <li>CSS<br><img src="../assets/css.png" alt="html"></li>
+                                                      <li>JavaScript<br><img src="../assets/javascript.png" alt="js"></li>
+                                                      <li>PHP<br><img src="../assets/php.png" alt="php"></li>
+                                                      <li>MYSQL<br><img src="../assets/mysql.png" alt="mysql"></li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                              </section>
+                              <hr><hr>
+                              
+                              <!-- Project section -->
+
+                              <div id="my_projects">
+                                    <h2>My Projects</h2>
+                                    <p>These are the collections of projects that I have done:</p>
+                                    <div class="projects_tiles">
+                                          <div class="project">Project 1</div>
+                                          <div class="project">Project 2</div>
+                                          <div class="project">Project 3</div>
+                                          <div class="project">Project 4</div>
+                                          <div class="project">Project 5</div>
+                                          <div class="project">Project 6</div>
+                                    </div>
+                              </div>
+
+                              <hr><hr>
+                              <section id="contact_me">
+                                    <!-- <h2>Contact Me</h2> -->
+                                    <h1 onmouseover="addText()" onmouseout="removeText()">Let's have a coffee together!<span id="text_area"></span></h1></span>
+                                    <div class = "inside_contact_me">
+                                          <div class="user_details">
+                                                <input class="first_input" type="text" placeholder="Your name"><br>     
+                                                <input class="first_input" type="email" placeholder="Your email"><br>
+                                                <input class="message_me" type="text" placeholder="Message Me" ><br>
+                                                <input class="send_button" type="button" value="Send"> 
+                                                
+                                          </div>
+                                          <div class="my_information">
+                                                <p class="my_info_text">
+                                                      Imadol, Lalitpur<br>
+                                                      bibekdh2016@gmail.com<br>
+                                                      +977-9845908326<br>
+                                                </p>
+                                          </div>
+                                    </div>
+                              </section>
+                              <footer>
+                                    <p class="footer_text">© Copying this site will cost you a Github Follow ;) </p>
+                              </footer>
+                        </main>
+                    </div>
+                    <script>
+
+
+                        function addText(){
+                              document.getElementById("text_area").innerText= "☕️☕️☕️";
+                        }
+                        function removeText(){
+                              document.getElementById("text_area").innerText= "";
+                        }
+
+                    </script>
+            </body>
+      </head>
+</html>

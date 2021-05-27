@@ -1,0 +1,297 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+body{
+      background-color: #0A192F;
+}
+
+/* .webpage{
+      border: 12px red solid;
+      padding: 0 2em 2em;
+} */
+a{
+      text-decoration: none;
+      color: inherit;/*It doesn't use default color blue but hence use the color of parent element*/
+}
+h1,h2,p,h3{
+      color:white;
+}
+
+/*Nav Bar*/
+.navigation{
+      /* margin-left:30em; */
+      background-color: hsla(240, 3%, 6%, 0.667);
+      display: flex;
+      justify-content: space-between;
+      padding:1em;      
+      width:100%;
+      color: white;
+      position: fixed;
+}
+      
+.navigation header{
+      font-size: 2em;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+      margin:0 15.5em 0 1em;
+      transition: font-size 2s,transform 2s;
+}
+.navigation header:hover{
+      color:aqua;
+}
+
+.navigation ul{
+      list-style: none;
+      text-align:end;
+      /* display: block;It makes ul which is inline element as inline block element */
+}
+
+.navigation li{
+      float:right;
+      margin: 1em 2em;     
+}
+
+.navigation li:hover{
+      border: 2px aqua solid;
+      border-radius: 20px;
+      transform:translateY(5  px);
+      background-color: cadetblue;
+}
+
+/* Social Media Icons Section */
+
+.social_media{
+      position: fixed;
+      color:#CCD6F7;
+      margin:5em 0 0 80em;
+      height: 10em;
+      width: 10em;
+      /* background-color: blue; */
+}
+
+.social_media .vertical_line{
+      background-color: #CCD6F7;
+      height:4em;
+      width:0.1em;
+      margin:0 0 0 1em;
+}
+
+.social_media .icon{
+      font-size: 2em;
+      padding:0.5em 0 0 0 ;
+}
+
+.social_media .icon:hover{
+      color:aqua;
+}
+
+/*About Me section*/
+#about_me{
+      /* margin-top:10em;*/
+      padding-top:10em;
+      display: flex;
+      flex-direction: row-reverse;
+      color: white;     
+      margin-bottom: 5em;
+      /* background-color:hsla(240, 3%, 68%, 0.51); */
+      /* justify-content: space-around; */
+}
+
+#about_me img{
+      /* margin-left: 10em; */
+      margin-top:9em;
+      border-radius: 15em;
+      height: 20em;
+      width: auto;
+}
+
+#about_me img:hover{
+      border:2px aqua solid;
+      margin-top:9em;
+      border-radius: 15em;
+      height: 25em;
+      transform: skewY(20px);
+      width: auto;      
+}
+
+.about_me_description{
+      /* background-color:#747377; */
+      border-radius: 1.5em;
+      margin-left: 3em;
+      margin-top:15em;
+}
+.about_me_description h1{
+            display: inline-block;
+            font-size:4em;
+            font-style: sans-serif;
+            font-weight: 400;
+            padding-bottom: 1em;
+}
+
+/* Too much colorful site: if needed hover effect then we can use it :)
+ .about_me_description h1:hover{
+      color:burlywood;
+} */
+
+.about_me_description p{
+      font-size: 1.5em;
+}
+/*My Skills Section*/
+#my_skills{
+      /* height: 40em; */
+      margin:5em 0 5em 0;
+      padding:3em;
+      color: white;
+    
+      /* background-color:hsla(240, 3%, 35%, 0.51); */
+      /* border:20px blue solid; */
+}
+#my_skills h2{
+      font-size: 2em;
+      text-align: center;
+}
+/* .skills-div{
+      display: flex;
+      justify-content: space-between;
+} */
+.skills-description{
+      /* display: inline-block; */
+      /* position:relative; */
+      /* width: 50 */
+      text-align: center;
+      margin-top: 1em;
+      font-size:1.3em;
+      color:#8892B0;
+      background-color: #112240;
+      padding: 1em;
+      /* background-color: crimson; */
+}
+.skill-bar{
+      /* width: 50%; */
+      justify-content: center;
+      padding: 8em 0 0 0;
+      /* background-color: cornflowerblue; */
+}
+.skill-bar li{
+      /* list-style: none; */
+      list-style-type:none;
+      font-size: 1.5em;
+}
+
+.tech_stack{
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      flex-wrap: wrap;
+}
+
+.tech_stack img{
+      margin:1em 0 0 0;
+      height: 10em;
+      width: 10em;
+}
+
+
+/* Projects section */
+
+#my_projects{
+      padding:8em;
+}
+
+#my_projects h2{
+      text-align: center;
+      font-size: 2em;   
+}
+#my_projects p{
+      text-align:center;
+      color: #8892B0;
+}
+
+.projects_tiles{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin:2em 10em;
+}
+.projects_tiles .project{
+      margin-bottom:1em;
+      height:15em;
+      width:15em;
+      background-color: #112240;
+      transition: height 1s,width 2s;
+}
+
+
+.project:hover{
+      height:17em;
+      width:17em;
+}
+/*Contact Me form section*/
+#contact_me{
+      padding:3em;
+}
+
+#contact_me h1{
+      font-size: 3em;
+      font-family: monospace;
+      text-align: center;
+}
+
+/* #contact_me h1:hover{
+
+} */
+
+.inside_contact_me{
+      font-size: 2em;
+      /* margin-top: 5em; */
+      display: flex;
+      justify-content: space-around;
+}
+.user_details{
+      background-color: #112240;
+      padding:2em 0.5em 0 0.5em;
+      margin-top:3em;
+}
+
+.first_input{
+      height: 2em;
+      width:20em;
+      font-size: 0.7em;
+      margin:0.7em 0;
+}
+.message_me{
+      font-size:1.1em;
+      height: 2em;
+      margin-top:1em;      
+}
+.my_information{
+      margin-top: 10em;
+}
+
+.send_button{
+      margin: 1em 0 3em 12em;
+      /* background-color: hsl(80, 58%, 16%); */
+      border-radius: 2em;
+      height: 4em;
+      width:8em;
+      border:0.3em #6EEFDA solid;
+}
+.send_button:hover{
+      background-color: hsla(218, 58%, 16%, 0.299);
+}
+
+/* Footer Section */
+
+footer{
+      height:2em;
+      background-color: black;
+      text-align: center;
+      font-family:sans-serif;
+      font-size:2em;
+}
+
+.footer_text{
+      color:red;
+}
