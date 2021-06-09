@@ -3,8 +3,13 @@
       margin: 0;
       box-sizing: border-box;
 }
+/* Single Line of code to make smooth transition to move to the section clicked */
+html{
+      scroll-behavior: smooth;
+}
 body{
       background-color: #0A192F;
+      
 }
 
 /* .webpage{
@@ -15,6 +20,7 @@ a{
       text-decoration: none;
       color: inherit;/*It doesn't use default color blue but hence use the color of parent element*/
 }
+
 h1,h2,p,h3{
       color:white;
 }
@@ -60,12 +66,17 @@ h1,h2,p,h3{
       background-color: cadetblue;
 }
 
+.navigation a{
+      transition-delay: 1s ease;
+}
 /* Social Media Icons Section */
 
 .social_media{
       position: fixed;
       color:#CCD6F7;
-      margin:5em 0 0 88em;
+      /* margin:5em 0 0 88em; */
+      top:  5em;
+      /* right:2rem; */
       height: 10em;
       width: 10em;
       /* background-color: blue; */
@@ -86,6 +97,11 @@ h1,h2,p,h3{
 .social_media .icon:hover{
       color:aqua;
 }
+ /* Section for all the contents */
+ .main{
+       scroll-behavior: smooth;
+ }
+
 
 /*About Me section*/
 #about_me{
@@ -209,24 +225,24 @@ h1,h2,p,h3{
       color: #8892B0;
 }
 
-.projects_tiles{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin:2em 10em;
-}
-.projects_tiles .project{
-      margin-bottom:1em;
-      height:15em;
-      width:15em;
-      background-color: #112240;
-      transition: height 1s,width 2s;
+      .projects_tiles{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin:2em 9em;
+      }
+      .projects_tiles .project{
+            margin-bottom:1em;
+            height:16em;
+            width:18em;
+            background-color: #112240;
+            transition: height 1s,width 2s;
 }
 
 
 .project:hover{
-      height:17em;
-      width:17em;
+      height:18em;
+      width:19em;
 }
 /*Contact Me form section*/
 #contact_me{
