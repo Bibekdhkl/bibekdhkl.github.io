@@ -62,13 +62,11 @@ h1,h2,p,h3{
 .navigation li:hover{
       border: 2px aqua solid;
       border-radius: 20px;
-      transform:translateY(5  px);
+      transform:translateY(5px);
       background-color: cadetblue;
+      transition: border 0.5s,border-radius 0.8s;
 }
 
-.navigation a{
-      transition-delay: 1s ease;
-}
 /* Social Media Icons Section */
 
 .social_media{
@@ -76,7 +74,7 @@ h1,h2,p,h3{
       color:#CCD6F7;
       /* margin:5em 0 0 88em; */
       top:  5em;
-      /* right:2rem; */
+      left:1em;
       height: 10em;
       width: 10em;
       /* background-color: blue; */
@@ -111,12 +109,10 @@ h1,h2,p,h3{
       flex-direction: row-reverse;
       color: white;     
       margin-bottom: 5em;
-      /* background-color:hsla(240, 3%, 68%, 0.51); */
-      /* justify-content: space-around; */
 }
 
 #about_me img{
-      /* margin-left: 10em; */
+      margin-left: 10em;
       margin-top:9em;
       border-radius: 15em;
       height: 20em;
@@ -124,12 +120,13 @@ h1,h2,p,h3{
 }
 
 #about_me img:hover{
-      border:2px aqua solid;
+      border:4px aqua solid;
       margin-top:9em;
       border-radius: 15em;
       height: 25em;
-      transform: skewY(20px);
-      width: auto;      
+      /* transform: skewY(20px); */
+      width: auto;     
+      transition: border 1.5s linear,height 1s ease; 
 }
 
 .about_me_description{
@@ -139,11 +136,11 @@ h1,h2,p,h3{
       margin-top:15em;
 }
 .about_me_description h1{
-            display: inline-block;
-            font-size:4em;
-            font-style: sans-serif;
-            font-weight: 400;
-            padding-bottom: 1em;
+      display: inline-block;
+      font-size:4em;
+      font-style: sans-serif;
+      font-weight: 400;
+      padding-bottom: 1em;
 }
 
 /* Too much colorful site: if needed hover effect then we can use it :)
@@ -153,6 +150,10 @@ h1,h2,p,h3{
 
 .about_me_description p{
       font-size: 1.5em;
+}
+
+.about_me_description p b{
+      font-size: 1.8em;
 }
 /*My Skills Section*/
 #my_skills{
@@ -193,7 +194,11 @@ h1,h2,p,h3{
 .skill-bar li{
       /* list-style: none; */
       list-style-type:none;
-      font-size: 1.5em;
+      font-size: 1em;
+}
+.skill-bar li:hover{
+      font-size: 1.1em;
+      transition:font-size 0.6s;
 }
 
 .tech_stack{
@@ -225,18 +230,18 @@ h1,h2,p,h3{
       color: #8892B0;
 }
 
-      .projects_tiles{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin:2em 9em;
-      }
-      .projects_tiles .project{
-            margin-bottom:1em;
-            height:16em;
-            width:18em;
-            background-color: #112240;
-            transition: height 1s,width 2s;
+.projects_tiles{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin:2em 9em;
+ }
+.projects_tiles .project{
+      margin-bottom:1em;
+      height:16em;
+      width:18em;
+      background-color: #112240;
+      transition: height 1s,width 2s;
 }
 
 
@@ -311,3 +316,56 @@ footer{
 .footer_text{
       color:red;
 }
+
+/* Responsiveness on viewport(viewing size) 800px or less */
+
+@media screen and (max-width: 800px) {
+      .navigation{
+            flex-wrap: wrap;
+      }
+      .navigation header{
+            font-size:1.5em;
+      }
+      .social_media{
+            top:0;
+            left:unset;
+            /* Unset removes previously applied left property */
+            right:1em;
+            padding: 0 0 0 8em;
+      }
+      #about_me{
+            flex-direction: column;
+      }
+      #about_me img{
+            height: auto;
+            width: 50%;
+            margin:10em 0 0 5em;
+      }
+      #about_me img:hover{
+            width: 60%;
+            height: auto;  
+      }
+      .projects_tiles{
+            justify-content: space-evenly;
+            margin:0;
+      }
+      .projects_tiles .project{
+            margin-bottom:2em;
+            width:35em;
+            height: 20em;
+      }
+      .inside_contact_me{
+            flex-direction: column;
+            justify-content:unset;
+      }
+      .user_details{
+            margin-top:0em;
+      }
+      .my_information{
+            margin: 0 0 0 3em;
+      }
+      footer{
+            font-size:1.5em;
+      }
+    }
+    
