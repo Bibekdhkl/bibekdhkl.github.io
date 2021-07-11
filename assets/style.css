@@ -61,10 +61,9 @@ h1,h2,p,h3{
 
 .navigation li:hover{
       border: 2px aqua solid;
-      border-radius: 20px;
-      transform:translateY(5px);
+      /* transform:translateY(5px); */
       background-color: cadetblue;
-      transition: border 0.5s,border-radius 0.8s;
+      transition: border 0.3s;
 }
 
 /* Social Media Icons Section */
@@ -238,6 +237,7 @@ h1,h2,p,h3{
  }
 .projects_tiles .project{
       margin-bottom:1em;
+      color:whitesmoke;
       height:16em;
       width:18em;
       background-color: #112240;
@@ -265,7 +265,7 @@ h1,h2,p,h3{
 } */
 
 .inside_contact_me{
-      font-size: 2em;
+      font-size: 1.8em;
       /* margin-top: 5em; */
       display: flex;
       justify-content: space-around;
@@ -300,8 +300,29 @@ h1,h2,p,h3{
       border:0.3em #6EEFDA solid;
 }
 .send_button:hover{
-      background-color: hsla(218, 58%, 16%, 0.299);
+      background-color: hsl(216, 65%, 81%);
 }
+
+/* Scroll to top section*/
+.totop{
+      position: fixed;
+      font-size: 3em;
+      bottom:0.5em;
+      right:1em;
+      color:rgb(2, 8, 19);
+      font-weight: 800;
+      height: 0.8em;
+      width: 0.8em;
+      border-radius: 50%;
+}
+.totop:hover{
+      border: 3px solid red;
+      color:red;
+      height:0.9em;
+      width:0.9em;
+      transition: border 1s,height 0.5s, width 0.5s,color 1s;
+}
+
 
 /* Footer Section */
 
@@ -339,7 +360,8 @@ footer{
       #about_me img{
             height: auto;
             width: 50%;
-            margin:10em 0 0 5em;
+            /* margin:10em 0 0 5em; */
+            
       }
       #about_me img:hover{
             width: 60%;
