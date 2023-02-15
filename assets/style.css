@@ -158,7 +158,7 @@ h1,h2,p,h3{
 #my_skills{
       /* height: 40em; */
       margin:5em 0 5em 0;
-      padding:3em;
+      padding:7em 7em 0 7em;
       color: white;
     
       /* background-color:hsla(240, 3%, 35%, 0.51); */
@@ -187,7 +187,7 @@ h1,h2,p,h3{
 .skill-bar{
       /* width: 50%; */
       justify-content: center;
-      padding: 8em 0 0 0;
+      padding: 2em 0 0 0;
       /* background-color: cornflowerblue; */
 }
 .skill-bar li{
@@ -212,7 +212,16 @@ h1,h2,p,h3{
       height: 10em;
       width: 10em;
 }
-
+/* Other Technology */
+#other_tech{
+      margin:0;
+      padding:2em 8em;
+      color: white;
+}
+#other_tech h2{
+      font-size: 2em;
+      text-align: center;
+}
 
 /* Projects section */
 
