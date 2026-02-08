@@ -4,18 +4,15 @@
             <title>
                   Bibek's Portfolio
             </title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"
-
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
-            <meta name="viewport" content="width=device-widht,inital-scale=1">
             <link rel="stylesheet" href="assets/style.css">
 
             <link rel="preconnect" href="https://fonts.gstatic.com">
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
             <!-- Fontawesome CDN include -->
             <script src="https://kit.fontawesome.com/f4013c76e7.js" crossorigin="anonymous"></script>
-            
-                  
+      </head>
             <body>
                   <div class="webpage">
                         <div class="navigation">
@@ -24,9 +21,12 @@
                               <ul>
                                     <li><a href="#about_me">About Me</a></li>
                                     <li><a href="#my_skills">My Skills</a></li>
-                                    <li><a href="#contact_me">Contact</a></li>
                                     <li><a href="#my_projects">Projects</a></li>
-
+                                    <li><a href="#gallery">Gallery</a></li>
+                                    <li><a href="#talks">Talks</a></li>
+                                    <li><a href="#podcasts">Podcasts</a></li>
+                                    <li><a href="#resources">Resources</a></li>
+                                    <li><a href="#contact_me">Contact</a></li>
                               </ul>
                         </div>
                         <div class="social_media">
@@ -108,6 +108,35 @@
                               </div>
 
                               <hr><hr>
+
+                              <!-- Gallery Section -->
+                              <section id="gallery">
+                                    <h2>Gallery</h2>
+                                    <div id="gallery-content"></div>
+                              </section>
+                              <hr><hr>
+
+                              <!-- Talks Section -->
+                              <section id="talks">
+                                    <h2>Public Speaking & Talks</h2>
+                                    <div id="talks-content"></div>
+                              </section>
+                              <hr><hr>
+
+                              <!-- Podcasts Section -->
+                              <section id="podcasts">
+                                    <h2>Podcasts</h2>
+                                    <div id="podcasts-content"></div>
+                              </section>
+                              <hr><hr>
+
+                              <!-- Resources Section -->
+                              <section id="resources">
+                                    <h2>Resources</h2>
+                                    <div id="resources-content"></div>
+                              </section>
+                              <hr><hr>
+
                               <section id="contact_me">
                                     <!-- <h2>Contact Me</h2> -->
                                     <h1 onmouseover="addText()" onmouseout="removeText()">Let's have a coffee together!<span id="text_area"></span></h1></span>
@@ -137,7 +166,8 @@
                               </footer>
                         </main>
                     </div>
+                    <script src="data.js"></script>
+                    <script src="components.js"></script>
                     <script src="app.js"></script>
             </body>
-      </head>
 </html>

@@ -399,4 +399,227 @@ footer{
             font-size:1.5em;
       }
     }
-    
+
+/* =========================================
+   New Sections Styling
+   ========================================= */
+
+/* Common Section Styling */
+#gallery, #talks, #podcasts, #resources {
+      padding: 5em 2em;
+      color: white;
+}
+
+#gallery h2, #talks h2, #podcasts h2, #resources h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 1.5em;
+      color: #ccd6f6;
+}
+
+/* Gallery Section */
+.gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      padding: 0 2em;
+}
+
+.gallery-item {
+      background-color: #112240;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+      transform: translateY(-5px);
+}
+
+.gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+}
+
+.gallery-caption {
+      padding: 1em;
+      color: #8892b0;
+      font-size: 0.9em;
+      text-align: center;
+}
+
+/* Public Speaking & Talks Section */
+.talks-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      max-width: 800px;
+      margin: 0 auto;
+}
+
+.talk-card {
+      background-color: #112240;
+      padding: 1.5em;
+      border-radius: 8px;
+      border-left: 4px solid #64ffda;
+}
+
+.talk-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5em;
+      flex-wrap: wrap;
+}
+
+.talk-header h3 {
+      color: #ccd6f6;
+      font-size: 1.2em;
+}
+
+.talk-date {
+      color: #8892b0;
+      font-size: 0.9em;
+}
+
+.talk-event, .talk-topic {
+      color: #a8b2d1;
+      margin-bottom: 0.5em;
+}
+
+.btn-link {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      border: 1px solid #64ffda;
+      border-radius: 4px;
+      color: #64ffda;
+      font-size: 0.9em;
+      transition: background-color 0.3s;
+}
+
+.btn-link:hover {
+      background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Podcasts Section */
+.podcasts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      max-width: 800px;
+      margin: 0 auto;
+}
+
+.podcast-item {
+      display: flex;
+      background-color: #112240;
+      padding: 1.5em;
+      border-radius: 8px;
+      align-items: flex-start;
+      gap: 1.5em;
+}
+
+.podcast-icon {
+      font-size: 2em;
+      color: #64ffda;
+      background: rgba(100, 255, 218, 0.1);
+      padding: 0.5em;
+      border-radius: 50%;
+}
+
+.podcast-content h3 {
+      color: #ccd6f6;
+      margin-bottom: 0.5em;
+}
+
+.podcast-host {
+      color: #8892b0;
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
+      font-style: italic;
+}
+
+.podcast-desc {
+      color: #a8b2d1;
+      margin-bottom: 1em;
+}
+
+.podcast-link {
+      color: #64ffda;
+      text-decoration: underline;
+}
+
+/* Resources Section */
+.resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+      padding: 0 2em;
+}
+
+.resource-card {
+      background-color: #112240;
+      padding: 2em;
+      border-radius: 8px;
+      position: relative;
+      transition: transform 0.3s;
+}
+
+.resource-card:hover {
+      transform: translateY(-5px);
+}
+
+.resource-type {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      font-size: 0.8em;
+      color: #64ffda;
+      background: rgba(100, 255, 218, 0.1);
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+}
+
+.resource-card h3 {
+      color: #ccd6f6;
+      margin-bottom: 1em;
+      padding-right: 2em; /* Space for type tag */
+}
+
+.resource-card p {
+      color: #a8b2d1;
+      margin-bottom: 1.5em;
+      line-height: 1.5;
+}
+
+.resource-link {
+      display: inline-block;
+      color: #64ffda;
+      font-weight: bold;
+}
+
+.resource-link:hover {
+      text-decoration: underline;
+}
+
+/* Responsive Adjustments for New Sections */
+@media screen and (max-width: 600px) {
+      .gallery-grid, .resources-grid {
+            grid-template-columns: 1fr;
+            padding: 0;
+      }
+
+      .podcast-item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+      }
+
+      .talk-header {
+            flex-direction: column;
+            align-items: flex-start;
+      }
+}
