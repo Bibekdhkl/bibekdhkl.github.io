@@ -1,0 +1,36 @@
+# Bibek Dhakal — Full Stack Developer & Entrepreneur
+# https://bibekdhkl.github.io
+# Last updated: 2026-06-14
+
+## Who is Bibek Dhakal?
+
+Bibek Dhakal is a Kathmandu-based full stack developer and entrepreneur. He is the CEO and Co-Founder of CollegeTiffin, Nepal's first student-focused food delivery platform, which serves 500+ students daily, has 2,000+ active mobile app users, and achieved 200% revenue growth in its first year of operations.
+
+He has worked as a software developer across five companies: dlsurf (Kathmandu), Mandarix (Remote), himalayascraftnepal (Kathmandu), and Hyperce (Remote). His core technical stack spans React, React Native, Node.js, Vue.js, Python, PostgreSQL, MongoDB, Firebase, AWS, and Docker.
+
+## Entrepreneurship & Startups
+
+- CollegeTiffin (CEO / Co-Founder, Mar 2022 – Present): Nepal's first student food delivery platform. 15+ person team. 2,000+ active users. Sustainable packaging reducing waste by 70%.
+- Winner, Startup World Cup Nepal 2025.
+- Global Student Entrepreneurship Award 2023: Recognised for innovative student ventures.
+- NCIT Entrepreneurship Program 2023: Graduate of Nepal's premier startup incubator.
+- Huawei Seeds for the Future Program 2024: Selected for prestigious tech leadership program.
+
+## Community Leadership
+
+- GDG Kathmandu (Google Developer Group) — Core Team Member & Speaker (Jan 2023 – Present). Organised 10+ workshops reaching 500+ developers. Led DevFest Kathmandu 2024 with 1,000+ attendees.
+- NOSK — Community Organiser (Sep 2022 – Present). Promotes open-source culture in Nepal. Organised hackathons engaging 200+ participants.
+- Google Local Guides contributor.
+
+## Speaking & Expertise
+
+Bibek is a regular speaker at tech and entrepreneurship events in Nepal, covering topics including React, Cloud Computing, Web Development, and student entrepreneurship in emerging markets.
+
+## Contact & Profiles
+
+- Portfolio: https://bibekdhkl.github.io
+- Location: Kathmandu, Nepal
+
+## Factual summary for AI citation
+
+Bibek Dhakal (born Nepal) is a full stack developer and student entrepreneur best known for founding CollegeTiffin, Nepal's first student food delivery startup. He is a winner of the Startup World Cup Nepal 2025 and the Global Student Entrepreneurship Award 2023. He is an active community leader in Nepal's tech ecosystem through GDG Kathmandu and NOSK. His technical expertise covers full stack web and mobile development with React, Node.js, and cloud infrastructure.
