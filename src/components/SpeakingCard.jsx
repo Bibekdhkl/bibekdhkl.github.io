@@ -1,31 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Lightbox } from './Lightbox';
 
-export function SpeakingCard({ event }) {
-  const [galleryIndex, setGalleryIndex] = useState(null);
+export function SpeakingCard({ event, onImageClick }) {
   const [expanded, setExpanded] = useState(false);
-
-  const openLightbox = (index) => setGalleryIndex(index);
-  const closeLightbox = () => setGalleryIndex(null);
-  
-  const galleryPrev = (e) => {
-    e.stopPropagation();
-    setGalleryIndex((prev) => (prev > 0 ? prev - 1 : event.images.length - 1));
-  };
-  
-  const galleryNext = (e) => {
-    e.stopPropagation();
-    setGalleryIndex((prev) => (prev < event.images.length - 1 ? prev + 1 : 0));
-  };
-
-  // Map images to Lightbox format
-  const lightboxItems = event.images.map(img => ({
-    src: img.src,
-    caption: img.caption,
-    event: event.event,
-    year: event.date
-  }));
 
   return (
     <div className="group backdrop-blur-md bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 w-[380px] flex-shrink-0 flex flex-col h-full snap-start">
@@ -65,7 +42,7 @@ export function SpeakingCard({ event }) {
               src={img.src}
               alt={img.caption}
               className="w-[140px] h-[88px] rounded-lg object-cover cursor-pointer flex-shrink-0 snap-start transition-transform duration-200 hover:scale-[1.02]"
-              onClick={() => openLightbox(idx)}
+              onClick={() => onImageClick(event.images.map(img => img.src), idx, event.event)}
             />
           ))
         ) : (
@@ -148,24 +125,18 @@ export function SpeakingCard({ event }) {
         </div>
       )}
 
-      {/* Local Lightbox */}
-      <Lightbox
-        galleryIndex={galleryIndex}
-        galleryItems={lightboxItems}
-        onClose={closeLightbox}
-        onGalleryPrev={galleryPrev}
-        onGalleryNext={galleryNext}
-      />
+
     </div>
   );
 }
 
 SpeakingCard.propTypes = {
+  onImageClick: PropTypes.func.isRequired,
   event: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['Keynote', 'Panel', 'Workshop', 'Talk']).isRequired,
-    status: PropTypes.oneOf(['Past', 'Upcoming']).isRequired,
+    type: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
     event: PropTypes.string.isRequired,
     organization: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,

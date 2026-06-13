@@ -63,7 +63,7 @@ export function CommunityCard({
               key={imgIndex}
               className="relative overflow-hidden rounded-lg flex-shrink-0 group/img cursor-pointer"
               style={{width: '160px', height: '120px'}}
-              onClick={() => onImageClick(image, `${name} - Event ${imgIndex + 1}`)}
+              onClick={() => onImageClick(images, imgIndex, name)}
             >
               <img
                 src={image}

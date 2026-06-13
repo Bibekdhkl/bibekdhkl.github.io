@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import './App.css';
 
 // Sections
@@ -26,25 +26,33 @@ import { useScrollSpy } from './hooks/useScrollSpy';
  * <style> block from the original monolith.
  */
 export default function App() {
-  // Lightbox state (simple image)
-  const [lightboxImage, setLightboxImage] = useState(null);
-  const [lightboxTitle, setLightboxTitle] = useState('');
-  // Gallery lightbox state (with navigation)
+  // Gallery lightbox state (with navigation) — used for Awards gallery
   const [galleryIndex, setGalleryIndex] = useState(null);
+
+  // Card gallery lightbox state — used for Experience / Community card images
+  const [cardGalleryItems, setCardGalleryItems] = useState([]);
+  const [cardGalleryIndex, setCardGalleryIndex] = useState(null);
 
   // Scrollspy
   const sectionIds = useMemo(() => NAV_ITEMS.map((item) => item.id), []);
   const activeSection = useScrollSpy(sectionIds);
 
-  // --- Lightbox handlers (identical logic to original) ---
-  const openLightbox = (image, title) => {
+  // --- Card gallery handler (Experience / Community images) ---
+  const openCardGallery = useCallback((images, clickedIndex, cardName) => {
+    const items = images.map((src, i) => ({
+      src,
+      caption: `Image ${i + 1} of ${images.length}`,
+      event: cardName,
+      year: ''
+    }));
+    setCardGalleryItems(items);
+    setCardGalleryIndex(clickedIndex);
     setGalleryIndex(null);
-    setLightboxImage(image);
-    setLightboxTitle(title);
-  };
+  }, []);
 
+  // --- Awards gallery handlers ---
   const openGalleryLightbox = (index) => {
-    setLightboxImage(null);
+    setCardGalleryIndex(null);
     setGalleryIndex(index);
   };
 
@@ -58,10 +66,21 @@ export default function App() {
     setGalleryIndex((prev) => (prev < GALLERY.length - 1 ? prev + 1 : 0));
   };
 
+  // --- Card gallery navigation handlers ---
+  const cardGalleryPrev = (e) => {
+    e.stopPropagation();
+    setCardGalleryIndex((prev) => (prev > 0 ? prev - 1 : cardGalleryItems.length - 1));
+  };
+
+  const cardGalleryNext = (e) => {
+    e.stopPropagation();
+    setCardGalleryIndex((prev) => (prev < cardGalleryItems.length - 1 ? prev + 1 : 0));
+  };
+
   const closeLightbox = () => {
-    setLightboxImage(null);
-    setLightboxTitle('');
     setGalleryIndex(null);
+    setCardGalleryIndex(null);
+    setCardGalleryItems([]);
   };
 
   return (
@@ -80,24 +99,31 @@ export default function App() {
       {/* Main content */}
       <div className="relative z-10 container mx-auto px-6 py-20">
         <HeroSection />
-        <ExperienceSection onImageClick={openLightbox} />
-        <CommunitySection onImageClick={openLightbox} />
+        <ExperienceSection onImageClick={openCardGallery} />
+        <CommunitySection onImageClick={openCardGallery} />
         <MediaSection />
-        <SpeakingSection />
+        <SpeakingSection onImageClick={openCardGallery} />
         {/* <BlogSection /> */}
         <AwardsSection onGalleryClick={openGalleryLightbox} />
         <ContactSection />
       </div>
 
-      {/* Lightbox (simple + gallery) */}
+      {/* Lightbox — Awards gallery */}
       <Lightbox
-        lightboxImage={lightboxImage}
-        lightboxTitle={lightboxTitle}
         galleryIndex={galleryIndex}
         galleryItems={GALLERY}
         onClose={closeLightbox}
         onGalleryPrev={galleryPrev}
         onGalleryNext={galleryNext}
+      />
+
+      {/* Lightbox — Experience / Community card gallery */}
+      <Lightbox
+        galleryIndex={cardGalleryIndex}
+        galleryItems={cardGalleryItems}
+        onClose={closeLightbox}
+        onGalleryPrev={cardGalleryPrev}
+        onGalleryNext={cardGalleryNext}
       />
 
       {/* Styles — identical to original <style> block */}

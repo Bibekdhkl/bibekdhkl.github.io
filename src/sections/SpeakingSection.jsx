@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { SectionHeader } from '../components/SectionHeader';
 import { SpeakingCard } from '../components/SpeakingCard';
 import { SPEAKING_EVENTS } from '../data/speaking';
 
-export default function SpeakingSection() {
+export default function SpeakingSection({ onImageClick }) {
   return (
     <section id="speaking" className="mb-20 animate-slideUp" style={{ animationDelay: '0.4s' }}>
       <div className="mb-8 flex items-center justify-between">
@@ -16,15 +17,21 @@ export default function SpeakingSection() {
             </div>
           }
           title="Speaking & Events"
-          subtitle="Scroll horizontally to explore →"
+          subtitle="A collection of events where I've spoken — invited sessions, panel discussions, and more"
         />
+        <div className="hidden md:flex items-center gap-2 text-slate-500 text-sm">
+          <svg className="w-4 h-4 animate-bounce-horizontal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+          <span>Swipe</span>
+        </div>
       </div>
 
       <div className="overflow-x-auto pb-6 scrollbar-custom">
         {SPEAKING_EVENTS && SPEAKING_EVENTS.length > 0 ? (
           <div className="flex gap-6" style={{ width: 'max-content' }}>
             {SPEAKING_EVENTS.map((event) => (
-              <SpeakingCard key={event.id} event={event} />
+              <SpeakingCard key={event.id} event={event} onImageClick={onImageClick} />
             ))}
           </div>
         ) : (
@@ -36,3 +43,7 @@ export default function SpeakingSection() {
     </section>
   );
 }
+
+SpeakingSection.propTypes = {
+  onImageClick: PropTypes.func.isRequired
+};
