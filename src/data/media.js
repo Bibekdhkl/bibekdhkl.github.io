@@ -35,7 +35,7 @@ export const podcasts = [
   // },
   {
     title: 'AI with Andrej Karpathy, Reader3, Vibe Coding',
-    show: 'Bibek\s Podcast',
+    show: "Bibek's Podcast",
     platforms: [
       { name: 'Apple Podcasts', url: 'https://podcasts.apple.com/us/podcast/bibeks-podcast/id1864195311' },
       { name: 'Spotify', url: 'https://open.spotify.com/show/7wUkZ8lZbeDdoYkcaK4QDx' }
@@ -46,7 +46,7 @@ export const podcasts = [
   },
   {
     title: 'What shall I talk about next??',
-    show: 'Bibek\s Podcast or TBG Podcast',
+    show: "Bibek's Podcast or TBG Podcast",
     platforms: [
       { name: 'Youtube', url: 'https://www.youtube.com/@bibekdhkl' },
       { name: 'Apple Podcasts', url: 'https://podcasts.apple.com/us/podcast/bibeks-podcast/id1864195311' },
