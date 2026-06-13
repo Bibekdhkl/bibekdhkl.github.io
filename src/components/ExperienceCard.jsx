@@ -38,13 +38,13 @@ export function ExperienceCard({
       <div className="mb-4">
         <div className="flex items-start justify-between mb-2">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-1" style={{fontFamily: '"Space Mono", monospace'}}>
+            <h3 className="text-2xl font-bold text-white mb-1" style={{ fontFamily: '"Space Mono", monospace' }}>
               {name}
             </h3>
             <p className="text-sm text-slate-400">{location}</p>
           </div>
           <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${gradient} text-white whitespace-nowrap`}>
-            {endDate === 'Present' ? '● Active' : 'Completed'}
+            {endDate === 'Present' ? '● Active' : 'Previously Worked'}
           </span>
         </div>
         <p className="text-lg text-slate-300 font-medium mb-1">{role}</p>
@@ -65,12 +65,12 @@ export function ExperienceCard({
 
       {/* Image gallery */}
       <div className="mb-4 overflow-x-auto scrollbar-thin">
-        <div className="flex gap-2" style={{width: 'max-content'}}>
+        <div className="flex gap-2" style={{ width: 'max-content' }}>
           {images.map((image, imgIndex) => (
             <div
               key={imgIndex}
               className="relative overflow-hidden rounded-lg flex-shrink-0 group/img cursor-pointer"
-              style={{width: '160px', height: '120px'}}
+              style={{ width: '160px', height: '120px' }}
               onClick={() => onImageClick(image, `${name} - Image ${imgIndex + 1}`)}
             >
               <img
@@ -98,7 +98,7 @@ export function ExperienceCard({
               className="flex items-start gap-2 text-sm text-slate-300 leading-relaxed"
             >
               <span className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${gradient} mt-1.5 flex-shrink-0`}></span>
-              <span style={{fontFamily: '"IBM Plex Sans", sans-serif'}}>{achievement}</span>
+              <span style={{ fontFamily: '"IBM Plex Sans", sans-serif' }}>{achievement}</span>
             </li>
           ))}
         </ul>

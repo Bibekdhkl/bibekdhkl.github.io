@@ -2,6 +2,22 @@
 
 export const experiences = [
   {
+    name: 'Company Coming Soon...',
+    role: 'Product Manager',
+    startDate: 'Jan 2026',
+    endDate: 'Present',
+    location: 'Remote or Onsite',
+    description: 'Looking for Opportunities',
+    achievements: [
+      'Learning to use AI',
+      'Learning to Prompt well',
+      'Self Discovery'
+    ],
+    technologies: ['Claude', 'Gemini', 'Antigravity', 'Prompt Engineering', 'llm', 'Team Management', 'Product Roadmap'],
+    images: [],
+    color: 'red'
+  },
+  {
     name: 'dlsurf',
     role: 'Product Lead and Chief Operating Officer',
     startDate: 'Apr 2025',
