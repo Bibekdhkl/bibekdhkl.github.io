@@ -172,11 +172,11 @@ Shows on desktop to indicate scrollable content.
 - `bounce-horizontal` - Arrow bounce effect
 
 **Staggered timing:**
-```javascript
+<!-- ```javascript
 style={{
   animationDelay: `${index * 0.1}s`  // Each item delays by 0.1s
 }}
-```
+``` -->
 
 ### 12. 🎨 **Improved Card Design**
 
